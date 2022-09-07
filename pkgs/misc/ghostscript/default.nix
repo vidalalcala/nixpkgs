@@ -90,7 +90,7 @@ stdenv.mkDerivation rec {
 
   # don't build/install statically linked bin/gs
   buildFlags = [ "so" ];
-  installTargets = [ "so", "install" ];
+  installTargets = [ "so" "install" ];
 
   postInstall = ''
     ln -s gsc "$out"/bin/gs
